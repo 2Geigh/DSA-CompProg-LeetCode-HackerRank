@@ -37,4 +37,41 @@ def f3assisted(arr: list) -> int | None:
 # Recursive case would be that the target is not equal to the average of the min
     # and max we're scanning over, and must adjust the min or max towards
     # mid accordingly
-Acid = []
+
+# 4.5
+# In big O notation, how long would it take to print the value in each element of an array?
+# O(n)
+
+# 4.6
+# In big O notation, how long would it take to double the value of each element in an array?
+def f6(array: list) -> list:
+    toReturn = []
+
+    for item in array:
+        toRetturn.append(item * 2)
+    
+    return toReturn
+# O(n)
+
+# 4.7
+# In big O notation, how long would it take to double just the first value of an element in an array?
+def f7(array: list) -> list:
+    toReturn = array[:]
+    toReturn[0] = array[0] * 2
+
+    return toReturn
+# O(1)
+
+# 4.8
+# In big O notation, how long would it take to create a multiplication table with all the elements in an array?
+def f8(array: list) -> list:
+    multiplicationRows = []
+
+    for multiple in array:
+        row = []
+        for number in array:
+            row.append(number * multiple)
+        multiplicationRows.append(row)
+
+    return multiplicationRows
+# O(n**2)
